@@ -20,7 +20,7 @@ umbrella, or when to schedule something outdoors.
 2. Run the bundled script with the terminal tool:
 
    ```bash
-   python3 "$(find ~/.hermes/skills -path '*la-weather-planner/scripts/forecast.py' | head -1)" "Los Angeles" 2
+   python3 "$(find "${HERMES_HOME:-$HOME/.hermes}/skills" -path '*la-weather-planner/scripts/forecast.py' | head -1)" "Los Angeles" 2
    ```
 
    The script prints JSON: `location`, `now`, and `daily[]` with `high`, `low` (°F),
